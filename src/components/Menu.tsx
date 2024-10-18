@@ -1,11 +1,12 @@
-import React from 'react';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import React from 'react'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import { Link } from 'react-router-dom'
 
 interface MenuCoffeeProps {
-  anchorEl: null | HTMLElement;
-  open: boolean;
-  onClose: () => void;
+  anchorEl: null | HTMLElement
+  open: boolean
+  onClose: () => void 
 }
 
 const MenuCoffee: React.FC<MenuCoffeeProps> = ({ anchorEl, open, onClose }) => {
@@ -19,11 +20,11 @@ const MenuCoffee: React.FC<MenuCoffeeProps> = ({ anchorEl, open, onClose }) => {
         'aria-labelledby': 'basic-button',
       }}
     >
-      <MenuItem onClick={onClose}>Profile</MenuItem>
+      <MenuItem component={Link} to='/profile' onClick={onClose}>Profile</MenuItem>
       <MenuItem onClick={onClose}>My account</MenuItem>
       <MenuItem onClick={onClose}>Logout</MenuItem>
     </Menu>
-  );
-};
+  )
+}
 
-export default MenuCoffee;
+export default MenuCoffee

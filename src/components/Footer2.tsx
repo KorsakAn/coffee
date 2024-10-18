@@ -1,9 +1,9 @@
-import { Box, Container, Typography, Link } from '@mui/material';
-import { Facebook, Instagram, Twitter } from '@mui/icons-material'; // Импорт иконок из MUI
-import Grid from '@mui/system/Grid';
+import React from 'react'
+import { Box, Container, Typography, Link } from '@mui/material'
+import { Facebook, Instagram, Twitter } from '@mui/icons-material'
+import Grid from '@mui/system/Grid'
 
-
-function Footer2() {
+const Footer2: React.FC = () => {
   return (
     <Box
       component="footer"
@@ -70,7 +70,7 @@ function Footer2() {
         <Box mt={5}></Box>
       </Container>
     </Box>
-  );
+  )
 }
 
-export default Footer2;
+export default Footer2
